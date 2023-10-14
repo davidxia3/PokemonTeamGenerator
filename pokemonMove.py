@@ -33,5 +33,5 @@ for pokemon in pokedex:
                 moveList.append(moveName)
     pokedex[pokemon]["moves"]=moveList
 
-with open("pokedex.json", "w", encoding = "utf-8") as f:
+with open("pokedexWithMoves.json", "w", encoding = "utf-8") as f:
     json.dump(pokedex,f, ensure_ascii = False, indent = 4)
