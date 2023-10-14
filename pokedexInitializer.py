@@ -37,6 +37,7 @@ while lastFound==False:
 
         abilities = row.find_elements(By.CLASS_NAME, "PokemonAltRow-abilities")
         regularAbilities = abilities[0].text.lower().split("\n",1)
+        pokemon["ability1"]=""
         pokemon["ability2"]=""
         for i in range(len(regularAbilities)):
             pokemon["ability"+str(i+1)]=regularAbilities[i]
