@@ -17,10 +17,20 @@ for pokemon in pokedex:
     pokemonURL = "https://www.smogon.com/dex/sv/pokemon/"+pokemon+"/"
     driver.get(pokemonURL)
 
-    moves = driver.find_elements(By.CLASS_NAME, "MoveRow")
-    for move in moves:
-        moveName = move.find_element(By.CLASS_NAME, "MoveRow-name").text
-        moveList.append(moveName)
+    generations = driver.find_element(By.CLASS_NAME, "OtherGensList").find_elements(By.TAG_NAME, "a")
+    generationList=[]
+    for gen in generations:
+        generationList.append(gen.get_attribute("href"))
+    generationList.append(pokemonURL)
+    
+    for generation in generationList:
+        driver.get(generation)
+
+        moves = driver.find_elements(By.CLASS_NAME, "MoveRow")
+        for move in moves:
+            moveName = move.find_element(By.CLASS_NAME, "MoveRow-name").text
+            if moveName not in moveList:
+                moveList.append(moveName)
     pokedex[pokemon]["moves"]=moveList
 
 with open("pokedex.json", "w", encoding = "utf-8") as f:
