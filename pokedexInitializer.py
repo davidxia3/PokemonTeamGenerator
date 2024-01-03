@@ -13,7 +13,7 @@ url = 'https://www.smogon.com/dex/sv/pokemon/'
 driver = webdriver.Chrome(options = options) 
 driver.get(url) 
 
-
+counter = 0
 lastFound = False
 first = True
 while lastFound==False:
@@ -23,6 +23,7 @@ while lastFound==False:
     else:
         driver.execute_script("window.scrollBy(0,630)")
 
+    driver.implicitly_wait(50)
     rows = driver.find_elements(By.CLASS_NAME, "PokemonAltRow")
 
     for row in rows:
@@ -62,9 +63,11 @@ while lastFound==False:
         pokedex[name]=pokemon
         if name == "zygarde-complete":
             lastFound=True
-
+        print(name)
+        if (counter%15==0):
+            driver.save_screenshot("screeshot"+str(counter)+".png")
+        counter=counter+1
 
 
 with open("pokedex.json", "w", encoding = "utf-8") as f:
     json.dump(pokedex,f, ensure_ascii = False, indent = 4)
-
