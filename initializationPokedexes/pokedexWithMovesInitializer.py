@@ -6,7 +6,7 @@ import json
 options = Options()
 options.headless = True
 
-with open('pokedex.json', 'r') as file:
+with open('initializationPokedexes/pokedex.json.json', 'r') as file:
     pokedex = json.load(file)
 
 pokedexWithMoves={}
@@ -46,5 +46,5 @@ for key, value in pokedex.items():
     
     pokedexWithMoves[key]=pokemon
 
-with open("pokedexWithMoves.json", "w", encoding = "utf-8") as f:
+with open("initializationPokedexes/pokedexWithMoves.json", "w", encoding = "utf-8") as f:
     json.dump(pokedexWithMoves,f, ensure_ascii = False, indent = 4)

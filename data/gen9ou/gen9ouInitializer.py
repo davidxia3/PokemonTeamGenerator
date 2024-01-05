@@ -12,15 +12,13 @@ for i in range(5, len(rows)-1):
     pokemon={}
     columns = [col.strip() for col in rows[i].split('|') if col.strip()]
     rank = int(columns[0].strip())
-    name = columns[1].strip()
+    name = columns[1].strip().lower()
     usagePercent = float(columns[2].strip('%'))
-
-    print(name)
 
     pokemon["name"]=name
     pokemon["rank"]=rank
     pokemon["usagePercent"]=usagePercent
     pokedex[name]=pokemon
 
-with open("gen9ou.json", 'w') as json_file:
+with open("data/gen9ou/gen9ou.json", 'w') as json_file:
         json.dump(pokedex, json_file, indent=4)

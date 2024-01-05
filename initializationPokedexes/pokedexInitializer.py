@@ -74,6 +74,6 @@ while lastFound==False:
 
 driver.quit()
 
-with open("pokedex.json", "w", encoding = "utf-8") as f:
+with open("initializationPokedexes/pokedex.json", "w", encoding = "utf-8") as f:
     json.dump(pokedex,f, ensure_ascii = False, indent = 4)
 

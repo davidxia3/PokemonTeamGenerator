@@ -1,6 +1,6 @@
 import json
 
-with open('pokedexWithMoves.json', 'r') as file:
+with open('initializationPokedexes/pokedexWithMoves.json', 'r') as file:
     pokedexWithMoves = json.load(file)
 
 pokedexWithStatCombinations = {}
@@ -14,5 +14,5 @@ for key, value in pokedexWithMoves.items():
     pokemon["total"]=pokemon["hp"]+pokemon["atk"]+pokemon["def"]+pokemon["spa"]+pokemon["spd"]+pokemon["spe"]
     pokedexWithStatCombinations[key] = pokemon
 
-with open("pokedexWithStatCombinations.json", "w", encoding = "utf-8") as f:
+with open("initializationPokedexes/pokedexWithStatCombinations.json", "w", encoding = "utf-8") as f:
     json.dump(pokedexWithStatCombinations,f, ensure_ascii = False, indent = 4)
