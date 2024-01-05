@@ -1,4 +1,4 @@
-initializationPokedexes:
+initializationPokedexes:\n
   Uses Selenium to scrape the Smogon webpage for all Pokemon ('https://www.smogon.com/dex/sv/pokemon/') as well as each 
   individual Pokemon's Smogon site for data including, name, types, abilities, hidden ability, format, hitpoint stat, 
   attack stat, defense stat, special attack stat, special defense stat, speed stat, competitive strategies, 
