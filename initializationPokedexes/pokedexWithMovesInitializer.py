@@ -17,7 +17,7 @@ for key, value in pokedex.items():
     driver = webdriver.Chrome(options = options) 
     driver.get(url)     
     print(key)
-    driver.implicitly_wait(0.5)
+    driver.implicitly_wait(0.1)
 
     exportButtons = driver.find_elements(By.CLASS_NAME, "ExportButton")
     for exportButton in exportButtons:
@@ -34,13 +34,13 @@ for key, value in pokedex.items():
         pokemon["strategy"]="No Strategies"
 
     moveRows = driver.find_elements(By.CLASS_NAME, "MoveRow  ")
-    moves=""
+    moves=[]
     for moveRow in moveRows:
         moveLink = moveRow.find_element(By.CLASS_NAME, "MoveLink")
         moveLinkText = moveLink.get_attribute("href")
         moveLinkTextParts = moveLinkText.split('/')
         moveName = moveLinkTextParts[-2]
-        moves=moves+moveName+", "
+        moves.append(moveName)
 
     pokemon["moves"]=moves
     
