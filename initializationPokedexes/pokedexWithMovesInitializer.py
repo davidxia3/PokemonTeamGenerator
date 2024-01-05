@@ -6,7 +6,7 @@ import json
 options = Options()
 options.headless = True
 
-with open('initializationPokedexes/pokedex.json.json', 'r') as file:
+with open('initializationPokedexes/pokedex.json', 'r') as file:
     pokedex = json.load(file)
 
 pokedexWithMoves={}

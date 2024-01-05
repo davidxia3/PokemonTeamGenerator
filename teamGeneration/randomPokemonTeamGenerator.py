@@ -1,7 +1,7 @@
 import json
 import random
 
-with open('pokedexWithStatCombinations.json', 'r') as file:
+with open('initializationPokedexes/pokedexWithStatCombinations.json', 'r') as file:
     pokedex = json.load(file)
 
 randomTeam = random.sample(list(pokedex.keys()), k=6)
