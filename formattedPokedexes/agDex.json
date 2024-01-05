@@ -1,0 +1,28 @@
+{
+    "calyrex-shadow": {
+        "name": "calyrex-shadow",
+        "type1": "psychic",
+        "type2": "ghost",
+        "ability1": "as one (spectrier)",
+        "ability2": "",
+        "hidden ability": "",
+        "format": "ag",
+        "hp": 100,
+        "atk": 85,
+        "def": 80,
+        "spa": 165,
+        "spd": 100,
+        "spe": 150,
+        "strategy: Nasty Plot": "Calyrex-Shadow @ Heavy-Duty Boots\nAbility: As One (Spectrier)\nEVs: 252 SpA / 4 SpD / 252 Spe\nIVs: 0 Atk\nTera Type: Grass\nTimid Nature\n- Nasty Plot\n- Astral Barrage\n- Grass Knot\n- Encore",
+        "strategy: Choice Specs": "Calyrex-Shadow @ Choice Specs\nAbility: As One (Spectrier)\nEVs: 4 Def / 252 SpA / 252 Spe\nTera Type: Ghost\nTimid Nature\n- Trick\n- Astral Barrage\n- Grass Knot\n- Psyshock",
+        "strategy: Choice Scarf": "Calyrex-Shadow @ Choice Scarf\nAbility: As One (Spectrier)\nEVs: 252 SpA / 4 SpD / 252 Spe\nIVs: 0 Atk\nTera Type: Ghost\nTimid Nature\n- Astral Barrage\n- Grass Knot\n- Psychic\n- Trick",
+        "strategy: Life Orb": "Calyrex-Shadow @ Life Orb\nAbility: As One (Spectrier)\nEVs: 252 SpA / 4 SpD / 252 Spe\nIVs: 0 Atk\nTera Type: Grass\nTimid Nature\n- Nasty Plot\n- Astral Barrage\n- Grass Knot\n- Psychic",
+        "moves": "agility, astral-barrage, baton-pass, body-press, body-slam, bulldoze, bullet-seed, calm-mind, confuse-ray, confusion, crunch, curse, dark-pulse, disable, double-edge, double-kick, draining-kiss, encore, endure, energy-ball, expanding-force, facade, foul-play, future-sight, giga-drain, giga-impact, grass-knot, grassy-terrain, gravity, growth, haze, heal-pulse, helping-hand, hex, hyper-beam, imprison, lash-out, leaf-storm, leech-seed, life-dew, light-screen, magical-leaf, mega-drain, metronome, mud-shot, nasty-plot, night-shade, pain-split, phantom-force, pollen-puff, pound, protect, psybeam, psychic, psychic-terrain, psych-up, psyshock, reflect, rest, scary-face, seed-bomb, shadow-ball, skill-swap, sleep-talk, snarl, solar-beam, solar-blade, stomp, stomping-tantrum, stored-power, substitute, sunny-day, swift, tackle, tail-whip, take-down, taunt, tera-blast, thrash, trick, trick-room, will-o-wisp, zen-headbutt, ",
+        "physweep": 235,
+        "spesweep": 315,
+        "phytank": 165,
+        "spetank": 265,
+        "wall": 280,
+        "total": 680
+    }
+}
